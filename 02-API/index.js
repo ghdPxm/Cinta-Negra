@@ -19,7 +19,6 @@ server.get('/api/', (req, res) => {
 
 //Ejercicio 1
 server.get('/api/suma/', (req, res) => {
-   // req.query.num1
    const {num1, num2} = req.query
    res.status(200).json({ resultado: ( parseInt(num1) + parseInt(num2) )})
     // res.type('json');
