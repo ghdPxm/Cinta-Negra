@@ -39,7 +39,6 @@ server.get('/api/swapi/:id', (req, res) => {
     const SWAPI_URI = `https://swapi.dev/api/people/${id}`;
 
     axios.get(SWAPI_URI)
-    //.then(res => console.log(res.data))
     .then(axiosRes => {
         const personaje = res.data;
         axiosRes.json({ personaje })
