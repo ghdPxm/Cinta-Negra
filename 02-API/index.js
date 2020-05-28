@@ -21,10 +21,6 @@ server.get('/api/', (req, res) => {
 server.get('/api/suma/', (req, res) => {
    const {num1, num2} = req.query
    res.status(200).json({ resultado: ( parseInt(num1) + parseInt(num2) )})
-    // res.type('json');
-    // res.send({
-    //     resultado: (parseInt(req.query.num1) + parseInt(req.query.num2))
-    // })
 })
 
 //Ejercicio 3
