@@ -34,12 +34,22 @@ server.get('/api/products', (req, res) => {
 server.get('/api/products/:id', (req, res) => {
     const { id } = req.params;
 
-    Products.findById(id,)
+    Products.findById(id)
     .then(product => {
         if(!product) res.status(404).json({messeage: 'product not fount' })
         res.status(200).json( product )
     })
-    .catch( err => console.log(err));
+    .catch( err => console.log( err ));
+});
+
+//UPDATE
+server.patch('/api/products/:id', ( req, res ) => {
+    const { id } = req.params;
+    const { body } = req;
+
+    Products.findByIdAndUpdate( id, body, {new: true } )
+    .then( updateProduct => res.status(200).json( updateProduct ))
+    .catch( err => res.status(404).json( err ));
 });
 
 
