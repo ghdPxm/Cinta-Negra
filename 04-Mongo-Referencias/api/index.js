@@ -52,5 +52,14 @@ server.patch('/api/products/:id', ( req, res ) => {
     .catch( err => res.status(404).json( err ));
 });
 
+//DELETE
+server.delete('/api/products/:id', (req, res) => {
+    const { id } = req.params;
+
+    Products.findByIdAndDelete(id)
+    .then(() => res.status(204).send())
+    .catch( err => res.status(404).json( err ));
+});
+
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
