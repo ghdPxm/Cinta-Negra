@@ -30,4 +30,15 @@ server.get('/api/products', (req, res) => {
     .catch( err => res.status(404).json(err));
 });
 
+//READ (ONE)
+server.get('/api/products/:id', (req, res) => {
+    const { id } = req.params;
+
+    Products.findById(id,)
+    .then(product => {
+        res.status(200).json( product )
+    })
+    .catch( err => console.log(err));
+});
+
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
