@@ -1,11 +1,13 @@
 const express = require('express');
 const server = express();
 const path = require('path');
-const PORT = 4000;
+const cors = require('cors');
+const PORT = 5000;
 
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json({ extended: true }));
+server.use(cors());
 
 server.get('/', (req, res) => {
     //retorna un json con mensaje
