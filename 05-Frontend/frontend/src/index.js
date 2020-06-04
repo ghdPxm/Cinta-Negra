@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import CreateProduct from './components/CreateProduct'
+import CreateProduct from './components/CreateProduct';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

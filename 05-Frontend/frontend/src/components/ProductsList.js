@@ -20,7 +20,13 @@ const ProductsList = () => {
     return(
         <React.Fragment>
             <h2>Products</h2>
-            { products.map(product => <Product key={product._id} name={product.name} price={product.price} /> )}
+            <div className="container">
+                <div className="row  justify-content-center ">
+                    <div className="col-sm-3" >
+                        { products.map(product => <Product key={product._id} name={product.name} price={product.price} /> )}
+                    </div>
+                </div>
+            </div>
         </React.Fragment>
     );
 }
