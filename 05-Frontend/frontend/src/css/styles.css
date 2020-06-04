@@ -1,0 +1,26 @@
+.Contenedor{
+    background-color: #5672f0; 
+    padding: 1em; 
+    width: 300px;
+    font-family: sans-serif;
+}
+
+.Titulo{
+    color: white;
+}
+
+.Form-CreateProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Input-Name .Input-Price{
+    margin-bottom: 1em;
+}
+
+.Button-Create{
+    color: white;
+    background-color: navy;
+}
+ 

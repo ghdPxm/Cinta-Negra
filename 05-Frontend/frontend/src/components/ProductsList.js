@@ -27,6 +27,13 @@ const ProductsList = () => {
                     </div>
                 </div>
             </div>
+            {/* 
+                Si aqui estuviera el componenete para agregar un nuevo
+                producto (formulario) teniendo en la misma vista 
+                los productos asi como el formulario. Ej
+                <CreateProduct setProducts = {setProducts} />
+                lo anterior es una funcion que se pasa como props    
+            */}
         </React.Fragment>
     );
 }

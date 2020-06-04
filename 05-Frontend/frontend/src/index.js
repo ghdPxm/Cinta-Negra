@@ -5,6 +5,7 @@ import CreateProduct from './components/CreateProduct';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 ReactDOM.render(
   <React.StrictMode>
    <BrowserRouter>
